@@ -18,7 +18,7 @@ public:
 	Decoder(std::vector<std::byte> data)
 		: m_data(data), m_pos(0) {}
 
-	void decode(GCodeCommand& cmd);
+	GCodeCommand decode();
 private:
 
 

@@ -73,8 +73,9 @@ std::vector<std::byte> Encoder::encode()
 	return buffer;
 }
 
-void Decoder::decode(GCodeCommand& cmd)
+GCodeCommand Decoder::decode()
 {
+	GCodeCommand cmd{};
 	auto letter = decodeData<char, 1>(m_data, m_pos).value;
 
 	if (letter == '\0')
@@ -98,4 +99,6 @@ void Decoder::decode(GCodeCommand& cmd)
 
 		}
 	}
+
+	return cmd;
 }

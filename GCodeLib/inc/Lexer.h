@@ -11,7 +11,7 @@ public:
 private:
     static bool is_space(char c) { return c == ' ' || c == '\t' || c == '\r' || c == '\n'; }
     static bool is_alpha(char c) { return (c | 0x20) >= 'a' && (c | 0x20) <= 'z'; }
-    static bool is_digit(char c) { return c >= '0' && c <= '9'; }
+    static bool is_digit(char c) { return c >= '0' && c <= '9' || c=='.'; }
 
     static std::pair<float, std::size_t> parse_number(std::string_view sv);
 

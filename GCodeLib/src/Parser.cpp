@@ -16,10 +16,10 @@ GCodeCommand Parser::parse()
 		if (optional(TokenKind::Star, i))
 		{
 			i++;
-			expect(TokenKind::Checksum, i, "Missing Checksum Value");
+			expect(TokenKind::Checksum, i, "Parser: Missing Checksum Value");
 			i++;
 		}
-		expect(TokenKind::EOL, i, "Expected Program EOL");
+		expect(TokenKind::EOL, i, "Parser: Expected Program EOL");
 		cmd.is_program = true;
 		return cmd;
 	}
@@ -28,17 +28,23 @@ GCodeCommand Parser::parse()
 	{
 		i++;
 
-		expect(TokenKind::Number, i, "Expected Line Number");
+		expect(TokenKind::Number, i, "Parser: Expected Line Number");
 		cmd.lineNo = m_tokens[i].number;
 		i++;
 	}
 
-	expect(TokenKind::Command, i, "Expected Command Letter");
+	if (optional(TokenKind::Comment, i))
+	{
+		cmd.comment = std::string(m_tokens[i].slice);
+		return cmd;
+	}
+
+	expect(TokenKind::Command, i, "Parser: Expected Command Letter");
 
 	cmd.letter = m_tokens[i].letter;
 	i++;
 
-	expect(TokenKind::Number, i, "Expceted command number");
+	expect(TokenKind::Number, i, "Parser: Expceted command number");
 
 	cmd.code = static_cast<int>(m_tokens[i].number);
 	i++;
@@ -57,17 +63,17 @@ GCodeCommand Parser::parse()
 		{
 			//cmd.letter = '*';
 			i++;
-			expect(TokenKind::Checksum, i, "Expected Checksum (Given)");
+			expect(TokenKind::Checksum, i, "Parser: Expected Checksum (Given)");
 			i++;
 			break;
 		}
 
-		expect(TokenKind::Param, i, "Expected Paramter Letter");
+		expect(TokenKind::Param, i, "Parser: Expected Parameter Letter");
 
 		char pLetter = m_tokens[i].letter;
 		i++;
 
-		expect(TokenKind::Number, i, "Expected Parameter Value.");
+		expect(TokenKind::Number, i, "Parser: Expected Parameter Value.");
 
 		double val = m_tokens[i].number;
 		cmd.params[pLetter] = val;

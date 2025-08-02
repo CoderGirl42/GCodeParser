@@ -104,9 +104,9 @@ std::vector<Token> Lexer::tokenize()
             case 'm':
                 ts.push_back({ TokenKind::Command, static_cast<char>(std::toupper(c)), 0.0, m_src.substr(m_pos, 1) });
                 break;
-            case 't':
-                ts.push_back({ TokenKind::Command, static_cast<char>(std::toupper(c)), 0.0, m_src.substr(m_pos, 1) });
-                break;
+            //case 't':
+            //    ts.push_back({ TokenKind::Command, static_cast<char>(std::toupper(c)), 0.0, m_src.substr(m_pos, 1) });
+            //    break;
             case 'o':
                 ts.push_back({ TokenKind::Command, static_cast<char>(std::toupper(c)), 0.0, m_src.substr(m_pos, 1) });
                 break;

@@ -1,0 +1,8 @@
+﻿  Encoder.cpp
+C:\Users\maris\Documents\GitHub\GCodeParser\GCodeLib\src\Encoder.cpp(28,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+      C:\Users\maris\Documents\GitHub\GCodeParser\GCodeLib\src\Encoder.cpp(28,13):
+      the template instantiation context (the oldest one first) is
+          C:\Users\maris\Documents\GitHub\GCodeParser\GCodeLib\src\Encoder.cpp(79,16):
+          see reference to function template instantiation 'ByteEncoder<char,1> decodeData<char,1>(std::vector<std::byte,std::allocator<std::byte>> &,size_t &)' being compiled
+  
+  GCodeLib.vcxproj -> C:\Users\maris\Documents\GitHub\GCodeParser\x64\Release\GCodeLib.lib

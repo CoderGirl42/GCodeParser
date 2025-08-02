@@ -11,6 +11,13 @@
 #include "..\GCodeLib\inc\Parser.h"
 #include "..\GCodeLib\inc\Encoder.h"
 
+struct ParseError
+{
+	std::size_t lineNo;
+	std::string message;
+    std::string line;
+
+};
 int main(int argc, char* argv[])
 {
     if (argc < 2) {
@@ -37,52 +44,89 @@ int main(int argc, char* argv[])
 
     std::string line;
     std::size_t lineNo = 0;
+    int errorCount = 0;
+	std::vector<ParseError> errors;
+    bool break_on_error = false;
 
-    try
+    while (std::getline(fin, line))
     {
-        while (std::getline(fin, line))
+        try
         {
             ++lineNo;
-            if (line.empty()) continue;
+
+            if (line.empty()) 
+                continue;
 
             Lexer lx{ line };
-            Parser px{ lx.tokenize() };
-            Encoder enc{ px.parse() };
+
+            std::vector<Token> tokens = lx.tokenize();
+
+            Parser px{ tokens };
+
+            GCodeCommand ir = px.parse();
+
+            Encoder enc{ ir };
+
             Decoder dec{ enc.encode() };
-            GCodeCommand cmd{};
-            dec.decode(cmd);
+            
+            GCodeCommand cmd = dec.decode();
 
-            auto t = px.parse();
-            std::cout << t.letter << " " << t.code << " ";
-            for (auto p : t.params)
-            {
-                std::cout << p.first << " " << p.second << " ";
+            std::cout << ir.letter << ir.code << " ";
+            for (auto p : ir.params) {
+                std::cout << p.first << p.second << " ";
             }
-
+         
             std::cout << "Hex:";
             std::vector<std::byte> byteCode = enc.encode();
-            for (std::byte b : byteCode)
-            {
+            for (std::byte b : byteCode) {
                 std::cout << ' ' << std::hex << std::uppercase << std::setw(2)
                     << std::setfill('0') << std::to_integer<int>(b);
             }
             std::cout << "  (size = " << std::dec << byteCode.size() << ")";
 
 			std::cout << " (Decoded: " << cmd.letter << cmd.code << " ";
-			for (const auto& p : cmd.params)
-			{
+			for (const auto& p : cmd.params) {
 				std::cout << p.first << p.second << " ";
 			}
 
-            std::cout << ")" << std::endl;
+			std::cout << ") " << ir.comment.value_or("") << '\n';
+
+            if (ir.letter != '\0')
+            {
+                for (auto b : byteCode) {
+                    fout.write(reinterpret_cast<const char*>(&b), sizeof(std::byte));
+                }
+
+                fout.flush();
+            }
+        }
+        catch (const std::exception& ex)
+        {
+            std::cerr << "Error at line " << lineNo << ": " << ex.what() << '\n';
+            errors.push_back({ lineNo, ex.what(), line });
+            errorCount++;
+
+			if (break_on_error) {
+				std::cerr << "Breaking on error.\n";
+				break;
+			}
+
+            continue;
         }
     }
-    catch (const std::exception& ex)
-    {
-        std::cerr << "Error at line " << lineNo << ": " << ex.what() << '\n';
-        return 1;
 
-    }
+	if (errorCount > 0)
+	{
+		std::cerr << "\n" << "Completed With Errors: " << errorCount << '\n';
+		for (const auto& err : errors)
+		{
+			std::cerr << "Error: Line " << err.lineNo << ": " << err.message << " (" << err.line << ")" << '\n';
+		}
+	}
+	else
+	{
+		std::cout << "\n" << "Compilation successful, no errors found.\n";
+	}
 
     return 0;
 }
