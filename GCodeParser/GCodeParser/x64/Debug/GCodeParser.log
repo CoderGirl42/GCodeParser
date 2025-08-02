@@ -1,0 +1,97 @@
+﻿  GCodeCompiler.cpp
+C:\Users\maris\Desktop\GCodeParser\Lexer.h(178,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'GCodeCompiler.cpp')
+  
+C:\Users\maris\Desktop\GCodeParser\Parser.h(79,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'GCodeCompiler.cpp')
+  
+C:\Users\maris\Desktop\GCodeParser\Encoder.h(104,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'GCodeCompiler.cpp')
+      C:\Users\maris\Desktop\GCodeParser\Encoder.h(104,14):
+      the template instantiation context (the oldest one first) is
+          C:\Users\maris\Desktop\GCodeParser\Encoder.h(76,17):
+          see reference to function template instantiation 'ByteEncoder<char,1> Decoder::decode<char,1>(void)' being compiled
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65): warning C4244: '=': conversion from 'float' to '_Ty', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65): warning C4244:         ]
+  (compiling source file 'GCodeCompiler.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(156,65):
+      the template instantiation context (the oldest one first) is
+          C:\Users\maris\Desktop\GCodeParser\Parser.h(38,15):
+          see reference to function template instantiation 'std::optional<int> &std::optional<int>::operator =<float&,0>(_Ty2) noexcept' being compiled
+          with
+          [
+              _Ty2=float &
+          ]
+              C:\Users\maris\Desktop\GCodeParser\Parser.h(38,15):
+              see the first reference to 'std::optional<int>::operator =' in 'Parser::parse'
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(294,15):
+          see reference to function template instantiation 'void std::_Optional_construct_base<_Ty>::_Assign<float&>(_Ty2) noexcept' being compiled
+          with
+          [
+              _Ty=int,
+              _Ty2=float &
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54): warning C4244: 'initializing': conversion from 'float' to '_Ty', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54): warning C4244:         ]
+  (compiling source file 'GCodeCompiler.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(389,54):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(294,15):
+          see reference to function template instantiation 'void std::_Optional_construct_base<_Ty>::_Assign<float&>(_Ty2) noexcept' being compiled
+          with
+          [
+              _Ty=int,
+              _Ty2=float &
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(158,13):
+          see reference to function template instantiation '_Ty &std::_Optional_construct_base<_Ty>::_Construct<float&>(float &) noexcept' being compiled
+          with
+          [
+              _Ty=int
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(146,14):
+          see reference to function template instantiation 'void std::_Construct_in_place<int,float&>(_Ty &,float &) noexcept' being compiled
+          with
+          [
+              _Ty=int
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(399,14):
+          see reference to function template instantiation '_Ty *std::construct_at<_Ty,float&>(_Ty *const ,float &) noexcept(<expr>)' being compiled
+          with
+          [
+              _Ty=int
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(403,61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'GCodeCompiler.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69): warning C4244: 'initializing': conversion from 'float' to '_Ty', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69): warning C4244:         ]
+  (compiling source file 'GCodeCompiler.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(390,69):
+      the template instantiation context (the oldest one first) is
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\optional(146,14):
+          see reference to function template instantiation 'void std::_Construct_in_place<int,float&>(_Ty &,float &) noexcept' being compiled
+          with
+          [
+              _Ty=int
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.41.34120\include\xutility(399,14):
+          see reference to function template instantiation '_Ty *std::construct_at<_Ty,float&>(_Ty *const ,float &) noexcept' being compiled
+          with
+          [
+              _Ty=int
+          ]
+  
+  GCodeParser.vcxproj -> C:\Users\maris\Desktop\GCodeParser\x64\Debug\GCodeParser.exe

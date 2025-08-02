@@ -1,0 +1,2 @@
+C:\Users\maris\Desktop\GCode\GCodeParser\x64\Debug\GCodeParser.exe
+C:\Users\maris\Documents\GitHub\GCodeParser\GCodeParser\x64\Debug\GCodeParser.exe
