@@ -1,6 +1,3 @@
-// GCodeParser.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -16,10 +13,10 @@ struct ParseError
 	std::size_t lineNo;
 	std::string message;
     std::string line;
-
 };
 
-void printGCodeLine(std::size_t lineNo, const GCodeCommand& ir, const std::vector<std::byte>& byteCode, const GCodeCommand& cmd) {
+void printGCodeLine(std::size_t lineNo, const GCodeCommand& ir, const std::vector<std::byte>& byteCode, const GCodeCommand& cmd) 
+{
     std::cout << "N" << lineNo << " " << ir.letter << ir.code << " ";
     for (auto p : ir.params) {
         std::cout << p.first << p.second << " ";
@@ -47,16 +44,14 @@ int main(int argc, char* argv[])
     const std::filesystem::path outPath = argv[2];
 
     std::ifstream fin(inPath);
-    if (!fin) 
-    { 
+    if (!fin) { 
         std::cerr << "Cannot open input file\n"; 
         return 1; 
     }
 
     std::ofstream fout(outPath, std::ios::binary);
 
-    if (!fout) 
-    {
+    if (!fout) {
         std::cerr << "Cannot open output file\n";
         return 1;
     }
@@ -100,13 +95,10 @@ int main(int argc, char* argv[])
                 for (auto b : byteCode) {
                     fout.write(reinterpret_cast<const char*>(&b), sizeof(std::byte));
                 }
-
                 fout.flush();
             }
         }
-        catch (const std::exception& ex)
-        {
-            //std::cerr << "Error at line " << lineNo << ": " << ex.what() << '\n';
+        catch (const std::exception& ex) {
             errors.push_back({ lineNo, ex.what(), line });
             errorCount++;
 
@@ -119,29 +111,14 @@ int main(int argc, char* argv[])
         }
     }
 
-	if (errorCount > 0)
-	{
+	if (errorCount > 0) {
 		std::cerr << "\n" << "Completed With Errors: " << errorCount << '\n';
-		for (const auto& err : errors)
-		{
+		for (const auto& err : errors) {
 			std::cerr << "Error: Line " << err.lineNo << ": " << err.message << " (" << err.line << ")" << '\n';
 		}
-	}
-	else
-	{
+	} else {
 		std::cout << "\n" << "Compilation successful, no errors found.\n";
 	}
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
