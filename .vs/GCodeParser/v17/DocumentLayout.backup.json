@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{64EFD954-370C-432D-9427-9CEB142253CC}|GCodeParser\\GCodeParser.vcxproj|solutionrelative:GCodeParser\\GCodeCompiler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Compiler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Compiler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Encoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Encoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Encoder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\src\\Encoder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\legobreadboard.gcode||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:legobreadboard.gcode||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Lexer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\src\\Lexer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Compiler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Compiler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\gcode_test.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gcode_test.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Lexer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\src\\Lexer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Parser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Lexer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Encoder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\src\\Encoder.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Parser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Parser.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Encoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|solutionrelative:GCodeLib\\inc\\Encoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD5009FE-570C-4221-959B-EEF5BE094437}|GCodeLib\\GCodeLib.vcxproj|C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -66,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Parser.cpp",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Parser.cpp",
               "RelativeDocumentMoniker": "GCodeLib\\src\\Parser.cpp",
@@ -79,20 +75,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Encoder.h",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Encoder.h",
               "RelativeDocumentMoniker": "GCodeLib\\inc\\Encoder.h",
               "ToolTip": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Encoder.h",
               "RelativeToolTip": "GCodeLib\\inc\\Encoder.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-02T03:00:59.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Encoder.cpp",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Encoder.cpp",
               "RelativeDocumentMoniker": "GCodeLib\\src\\Encoder.cpp",
@@ -105,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Lexer.h",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Lexer.h",
               "RelativeDocumentMoniker": "GCodeLib\\inc\\Lexer.h",
@@ -118,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Lexer.cpp",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\src\\Lexer.cpp",
               "RelativeDocumentMoniker": "GCodeLib\\src\\Lexer.cpp",
@@ -144,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "framework.h",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\framework.h",
               "RelativeDocumentMoniker": "GCodeLib\\framework.h",
@@ -160,16 +156,16 @@
               "Title": "GCodeCompiler.cpp",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeParser\\GCodeCompiler.cpp",
               "RelativeDocumentMoniker": "GCodeParser\\GCodeCompiler.cpp",
-              "ToolTip": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeParser\\GCodeCompiler.cpp",
-              "RelativeToolTip": "GCodeParser\\GCodeCompiler.cpp",
-              "ViewState": "AgIAADgAAAAAAAAAAAAswDwAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeParser\\GCodeCompiler.cpp*",
+              "RelativeToolTip": "GCodeParser\\GCodeCompiler.cpp*",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-02T02:55:37.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Compiler.h",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\GCodeLib\\inc\\Compiler.h",
               "RelativeDocumentMoniker": "GCodeLib\\inc\\Compiler.h",
@@ -188,7 +184,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "legobreadboard.gcode",
               "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\legobreadboard.gcode",
               "RelativeDocumentMoniker": "legobreadboard.gcode",
@@ -198,17 +194,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-08-02T04:08:57.971Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "gcode_test.bin",
-              "DocumentMoniker": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\gcode_test.bin",
-              "RelativeDocumentMoniker": "gcode_test.bin",
-              "ToolTip": "C:\\Users\\maris\\Documents\\GitHub\\GCodeParser\\gcode_test.bin",
-              "RelativeToolTip": "gcode_test.bin",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-08-02T04:37:37.34Z"
             }
           ]
         }

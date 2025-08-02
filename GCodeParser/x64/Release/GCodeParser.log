@@ -1,7 +1,7 @@
 ﻿  GCodeCompiler.cpp
   Generating code
-  31 of 885 functions ( 3.5%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    19 functions had inline decision re-evaluated but remain unchanged
+  2 of 875 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   GCodeParser.vcxproj -> C:\Users\maris\Documents\GitHub\GCodeParser\x64\Release\GCodeParser.exe

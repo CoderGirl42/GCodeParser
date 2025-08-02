@@ -18,6 +18,25 @@ struct ParseError
     std::string line;
 
 };
+
+void printGCodeLine(std::size_t lineNo, const GCodeCommand& ir, const std::vector<std::byte>& byteCode, const GCodeCommand& cmd) {
+    std::cout << "N" << lineNo << " " << ir.letter << ir.code << " ";
+    for (auto p : ir.params) {
+        std::cout << p.first << p.second << " ";
+    }
+    std::cout << "Hex:";
+    for (std::byte b : byteCode) {
+        std::cout << ' ' << std::hex << std::uppercase << std::setw(2)
+            << std::setfill('0') << std::to_integer<int>(b);
+    }
+    std::cout << " (size: " << std::dec << byteCode.size() << ")";
+    std::cout << " (Decoded: " << cmd.letter << cmd.code << " ";
+    for (const auto& p : cmd.params) {
+        std::cout << p.first << p.second << " ";
+    }
+    std::cout << ") " << ir.comment.value_or("") << '\n';
+}
+
 int main(int argc, char* argv[])
 {
     if (argc < 2) {
@@ -67,32 +86,17 @@ int main(int argc, char* argv[])
 
             Encoder enc{ ir };
 
-            Decoder dec{ enc.encode() };
+            std::vector<std::byte> byteCode = enc.encode();
+
+            Decoder dec{ byteCode };
             
             GCodeCommand cmd = dec.decode();
 
-            std::cout << ir.letter << ir.code << " ";
-            for (auto p : ir.params) {
-                std::cout << p.first << p.second << " ";
-            }
-         
-            std::cout << "Hex:";
-            std::vector<std::byte> byteCode = enc.encode();
-            for (std::byte b : byteCode) {
-                std::cout << ' ' << std::hex << std::uppercase << std::setw(2)
-                    << std::setfill('0') << std::to_integer<int>(b);
-            }
-            std::cout << "  (size = " << std::dec << byteCode.size() << ")";
+#ifdef _DEBUG
+			printGCodeLine(lineNo, ir, byteCode, cmd);
+#endif
 
-			std::cout << " (Decoded: " << cmd.letter << cmd.code << " ";
-			for (const auto& p : cmd.params) {
-				std::cout << p.first << p.second << " ";
-			}
-
-			std::cout << ") " << ir.comment.value_or("") << '\n';
-
-            if (ir.letter != '\0')
-            {
+            if (ir.letter != '\0') {
                 for (auto b : byteCode) {
                     fout.write(reinterpret_cast<const char*>(&b), sizeof(std::byte));
                 }
@@ -102,7 +106,7 @@ int main(int argc, char* argv[])
         }
         catch (const std::exception& ex)
         {
-            std::cerr << "Error at line " << lineNo << ": " << ex.what() << '\n';
+            //std::cerr << "Error at line " << lineNo << ": " << ex.what() << '\n';
             errors.push_back({ lineNo, ex.what(), line });
             errorCount++;
 
